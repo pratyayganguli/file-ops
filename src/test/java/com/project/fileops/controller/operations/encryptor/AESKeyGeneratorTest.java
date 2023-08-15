@@ -19,5 +19,4 @@ class AESKeyGeneratorTest {
         var base64Key = Base64.getEncoder().encodeToString(byteArr);
         System.out.println(base64Key);
     }
-
 }

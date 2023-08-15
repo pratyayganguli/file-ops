@@ -1,4 +1,4 @@
-package com.project.fileops.controller;
+package com.project.fileops.controller.services;
 
 import com.project.fileops.common.data.FileCreatorInput;
 import com.project.fileops.common.data.FileReaderInput;
@@ -45,7 +45,7 @@ public class FileServiceImpl implements FileService{
         try{
             OutputStream fileOutputStream = new FileOutputStream(path);
             fileOutputStream.write(data);
-            logger.info("client is writing data inside " + path);
+            logger.info("client is writing data " + path);
             fileOutputStream.close();
         }
         catch (Exception e){

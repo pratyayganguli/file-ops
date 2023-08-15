@@ -17,6 +17,7 @@ public class AESKeyGenerator {
         try {
             KeyGenerator keyGenerator = KeyGenerator.getInstance("AES");
             keyGenerator.init(256);
+            logger.info("aes key generated");
             return keyGenerator.generateKey();
         }
         catch (Exception e) {

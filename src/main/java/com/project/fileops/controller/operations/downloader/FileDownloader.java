@@ -1,6 +1,4 @@
-package com.project.fileops.controller.operations.download;
-
-import com.project.fileops.controller.operations.download.Downloader;
+package com.project.fileops.controller.operations.downloader;
 
 /**
  * created on: 08 12 2023

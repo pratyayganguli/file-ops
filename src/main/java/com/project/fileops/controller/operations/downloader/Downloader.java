@@ -1,4 +1,4 @@
-package com.project.fileops.controller.operations.download;
+package com.project.fileops.controller.operations.downloader;
 
 /**
  * created on: 08 12 2023

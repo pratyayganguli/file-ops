@@ -5,5 +5,5 @@ package com.project.fileops.automate;
  * 8:17 pm
  */
 
-public class UploadFlowAutomation {
+class UploadFlowAutomation {
 }

@@ -30,8 +30,8 @@ public class FileEncryptor implements Encryptor{
             cipher.init(Cipher.ENCRYPT_MODE, secretKey);
             byte [] data = cipher.doFinal(input);
             EncryptedData encryptedData = new EncryptedData(secretKey, data);
+            logger.info("file encrypted");
             return encryptedData;
-
         }
         catch (Exception e){
             logger.error("encryption failure", e);

@@ -18,6 +18,7 @@ public class FileDecryptor implements Decryptor {
         try {
             Cipher cipher = Cipher.getInstance("AES");
             cipher.init(Cipher.DECRYPT_MODE, secretKey);
+            logger.info("file decrypted");
             return cipher.doFinal(content);
         }
         catch (Exception e){

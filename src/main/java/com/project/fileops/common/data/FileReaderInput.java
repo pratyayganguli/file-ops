@@ -7,12 +7,10 @@ package com.project.fileops.common.data;
 
 public class FileReaderInput {
     private String fileId;
-    private String userId;
     private String path;
 
-    public FileReaderInput(String fileId, String userId, String path) {
+    public FileReaderInput(String fileId, String path) {
         this.fileId = fileId;
-        this.userId = userId;
         this.path = path;
     }
 
@@ -22,14 +20,6 @@ public class FileReaderInput {
 
     public void setFileId(String fileId) {
         this.fileId = fileId;
-    }
-
-    public String getUserId() {
-        return userId;
-    }
-
-    public void setUserId(String userId) {
-        this.userId = userId;
     }
 
     public String getPath() {
