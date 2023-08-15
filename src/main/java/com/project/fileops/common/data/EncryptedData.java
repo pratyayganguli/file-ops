@@ -10,6 +10,7 @@ import javax.crypto.SecretKey;
 public class EncryptedData {
     private SecretKey secretKey;
     private byte[] data;
+    private String userId;
 
     public EncryptedData(SecretKey secretKey, byte[] data) {
         this.secretKey = secretKey;
@@ -30,5 +31,13 @@ public class EncryptedData {
 
     public void setData(byte[] data) {
         this.data = data;
+    }
+
+    public String getUserId() {
+        return userId;
+    }
+
+    public void setUserId(String userId) {
+        this.userId = userId;
     }
 }

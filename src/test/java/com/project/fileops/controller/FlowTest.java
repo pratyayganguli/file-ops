@@ -1,6 +1,5 @@
 package com.project.fileops.controller;
 
-import com.project.fileops.common.data.EncryptedData;
 import org.junit.jupiter.api.Test;
 
 /**
@@ -11,10 +10,9 @@ import org.junit.jupiter.api.Test;
 public class FlowTest {
     private final FileUploadFlow fileUploadFlow = new FileUploadFlow();
     private final FileDownloadFlow fileDownloadFlowTest = new FileDownloadFlow();
-
     @Test
     void test(){
-        EncryptedData encryptedData = fileUploadFlow.upload();
-        fileDownloadFlowTest.download(encryptedData);
+        var url = fileUploadFlow.getDownloadURL();
+        System.out.println(url);
     }
 }

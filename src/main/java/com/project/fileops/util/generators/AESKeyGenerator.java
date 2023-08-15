@@ -1,4 +1,4 @@
-package com.project.fileops.controller.operations.encryptor;
+package com.project.fileops.util.generators;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -11,12 +11,13 @@ import javax.crypto.SecretKey;
  * 7:29 pm
  */
 
-public class AESKeyGenerator {
+public class AESKeyGenerator implements Generator<SecretKey> {
     private static final Logger logger = LogManager.getLogger(LogManager.ROOT_LOGGER_NAME);
-    public SecretKey generateKey(){
+    @Override
+    public SecretKey generate(int length) {
         try {
             KeyGenerator keyGenerator = KeyGenerator.getInstance("AES");
-            keyGenerator.init(256);
+            keyGenerator.init(length);
             logger.info("aes key generated");
             return keyGenerator.generateKey();
         }
